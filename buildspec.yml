@@ -9,7 +9,7 @@ phases:
       - echo "Ready to deploy"
   post_build:
     commands:
-      - aws s3 sync ./ s3://$S3_BUCKET_NAME --delete
+      - aws s3 sync ./ s3://site-estatico-joao-task --delete
 artifacts:
   files:
     - '**/*'
