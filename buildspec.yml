@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "No build step for static site"
+  build:
+    commands:
+      - echo "Ready to deploy"
+  post_build:
+    commands:
+      - aws s3 sync ./ s3://$S3_BUCKET_NAME --delete
+artifacts:
+  files:
+    - '**/*'
