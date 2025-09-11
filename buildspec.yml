@@ -9,7 +9,10 @@ phases:
       - echo "Ready to deploy"
   post_build:
     commands:
-      - aws s3 sync ./ s3://site-estatico-joao-task --delete
+      # Sincroniza apenas arquivos do site para o bucket
+      - aws s3 sync ./ s3://site-estatico-joao-task --delete --exclude "buildspec.yml" --exclude ".git/*"
 artifacts:
   files:
     - '**/*'
+    - '!buildspec.yml'
+    - '!.git/*'
