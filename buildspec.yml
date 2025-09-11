@@ -6,11 +6,7 @@ phases:
       - echo "No build step for static site"
   build:
     commands:
-      - echo "Ready to deploy"
-  post_build:
-    commands:
-      # Sincroniza apenas arquivos do site para o bucket
-      - aws s3 sync ./ s3://site-estatico-joao-task --delete --exclude "buildspec.yml" --exclude ".git/*"
+      - echo "Build completed"
 artifacts:
   files:
     - '**/*'
