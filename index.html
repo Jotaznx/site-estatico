@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Site no S3</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2c85d3, #5cd5db);
+      color: #fff;
+      text-align: center;
+    }
+    .navbar {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      position: sticky;
+      top: 0;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .navbar a:hover {
+      color: #000000;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    p {
+      color: #000000;
+      font-size: 20px;
+      margin-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#">Início</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <h1>🚀 Site no ar!</h1>
+    <img src="https://d0.awsstatic.com/logos/powered-by-aws.png" alt="Powered by AWS Cloud Computing">
+    <p>Este é um site estático hospedado no <strong>Amazon S3</strong>, distribuído pelo <strong>CloudFront</strong> e com DNS gerenciado pelo <strong>Route 53</strong>.</p>
+
+    <h2>🌍 O que aprendi?</h2>
+    <p>
+      - Como criar um bucket no S3 e habilitar hospedagem estática.<br>
+      - Configurar o CloudFront para entregar o site com HTTPS.<br>
+      - Usar Route 53 para vincular um domínio ao site.<br>
+      - Garantir segurança e escalabilidade usando serviços serverless.
+    </p>
+  </div>
+</body>
+</html>
