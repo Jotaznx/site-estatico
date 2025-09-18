@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Nenhuma dependência necessária"
+  build:
+    commands:
+      - echo "Preparando arquivos para deploy"
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: .
+  discard-paths: no
